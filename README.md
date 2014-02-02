@@ -17,8 +17,14 @@ Minimal usage:
 
 ```js
 var marked = require('marked');
-console.log(marked('I am using __markdown__.'));
-// Outputs: <p>I am using <strong>markdown</strong>.</p>
+React.renderComponentToString(React.DOM.div(null,marked('I am using __markdown__.')),function(html){
+  console.log(html);
+});
+// Outputs: <div data-reactid=".r[16fuz]" data-react-checksum="-2122621507"><p data-reactid=".r[16fuz].[0]"><span data-reactid=".r[16fuz].[0].[0]">I am using </span><strong data-reactid=".r[16fuz].[0].[1]"><span data-reactid=".r[16fuz].[0].[1].[0]">markdown</span></strong><span data-reactid=".r[16fuz].[0].[2]">.</span></p></div> 
+React.renderComponent(
+  React.DOM.div(null, marked('I am using __markdown__.')),
+  document.getElementById('example')
+);
 ```
 
 Example setting options with default values:
