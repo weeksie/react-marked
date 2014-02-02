@@ -8,7 +8,7 @@
 ## Install
 
 ``` bash
-npm install marked --save
+npm install react-marked --save
 ```
 
 ## Usage
